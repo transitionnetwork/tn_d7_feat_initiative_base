@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * tn_d7_initiative_base.features.field_instance.inc
+ * tn_d7_feat_initiative_base.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function tn_d7_initiative_base_field_default_field_instances() {
+function tn_d7_feat_initiative_base_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance: 'node-initiative-field_coordinates'

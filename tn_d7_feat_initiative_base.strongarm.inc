@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * tn_d7_initiative_base.strongarm.inc
+ * tn_d7_feat_initiative_base.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function tn_d7_initiative_base_strongarm() {
+function tn_d7_feat_initiative_base_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();

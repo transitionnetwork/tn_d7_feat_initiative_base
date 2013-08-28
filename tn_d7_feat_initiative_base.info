@@ -1,4 +1,5 @@
 name = Transition Network: Initiative Base
+description = A simple Initiative content type and related directory views.
 core = 7.x
 package = Transition Network
 dependencies[] = addressfield
