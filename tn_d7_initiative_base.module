@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Transition Network: Initiative Base feature.
+ */
+
+include_once 'tn_d7_initiative_base.features.inc';
