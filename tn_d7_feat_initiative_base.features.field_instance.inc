@@ -66,6 +66,45 @@ function tn_d7_feat_initiative_base_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-initiative-field_description'
+  $field_instances['node-initiative-field_description'] = array(
+    'bundle' => 'initiative',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_description',
+    'label' => 'Description',
+    'required' => FALSE,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 0,
+    ),
+  );
+
   // Exported field_instance: 'node-initiative-field_location'
   $field_instances['node-initiative-field_location'] = array(
     'bundle' => 'initiative',
@@ -127,6 +166,46 @@ function tn_d7_feat_initiative_base_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-initiative-field_summary'
+  $field_instances['node-initiative-field_summary'] = array(
+    'bundle' => 'initiative',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'A short summary of this <em>Initiative</em>/',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_summary',
+    'label' => 'Summary',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => -1,
+    ),
+  );
+
   // Exported field_instance: 'node-initiative-field_website'
   $field_instances['node-initiative-field_website'] = array(
     'bundle' => 'initiative',
@@ -183,9 +262,12 @@ function tn_d7_feat_initiative_base_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('A short summary of this <em>Initiative</em>/');
   t('Coordinates');
+  t('Description');
   t('Location');
   t('Optional: The website of this <em>initiative</em>.');
+  t('Summary');
   t('The location of this Initiative.');
   t('Website');
 
