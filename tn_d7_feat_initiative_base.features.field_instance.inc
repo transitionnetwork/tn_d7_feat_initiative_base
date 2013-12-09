@@ -62,7 +62,7 @@ function tn_d7_feat_initiative_base_field_default_field_instances() {
         ),
       ),
       'type' => 'geocoder',
-      'weight' => -3,
+      'weight' => 2,
     ),
   );
 
@@ -101,7 +101,7 @@ function tn_d7_feat_initiative_base_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 0,
+      'weight' => 6,
     ),
   );
 
@@ -162,7 +162,51 @@ function tn_d7_feat_initiative_base_field_default_field_instances() {
         ),
       ),
       'type' => 'addressfield_standard',
-      'weight' => -4,
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-initiative-field_primary_contact'
+  $field_instances['node-initiative-field_primary_contact'] = array(
+    'bundle' => 'initiative',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'The person who is the primary contact for this <em>Initiative</em> - must already be a registered user on the Transition Network.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_primary_contact',
+    'label' => 'Primary point of contact',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 5,
     ),
   );
 
@@ -171,14 +215,14 @@ function tn_d7_feat_initiative_base_field_default_field_instances() {
     'bundle' => 'initiative',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'A short summary of this <em>Initiative</em>/',
+    'description' => 'A short summary of this <em>Initiative</em>.',
     'display' => array(
       'default' => array(
         'label' => 'above',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -190,7 +234,7 @@ function tn_d7_feat_initiative_base_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_summary',
     'label' => 'Summary',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -199,10 +243,14 @@ function tn_d7_feat_initiative_base_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'maxlength_js' => 250,
+        'maxlength_js_enforce' => 1,
+        'maxlength_js_label' => '<strong>@remaining</strong> (@limit)',
+        'maxlength_js_truncate_html' => 1,
+        'rows' => 5,
       ),
-      'type' => 'text_textfield',
-      'weight' => -1,
+      'type' => 'text_textarea',
+      'weight' => 3,
     ),
   );
 
@@ -256,19 +304,21 @@ function tn_d7_feat_initiative_base_field_default_field_instances() {
       'module' => 'link',
       'settings' => array(),
       'type' => 'link_field',
-      'weight' => -2,
+      'weight' => 4,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('A short summary of this <em>Initiative</em>/');
+  t('A short summary of this <em>Initiative</em>.');
   t('Coordinates');
   t('Description');
   t('Location');
   t('Optional: The website of this <em>initiative</em>.');
+  t('Primary point of contact');
   t('Summary');
   t('The location of this Initiative.');
+  t('The person who is the primary contact for this <em>Initiative</em> - must already be a registered user on the Transition Network.');
   t('Website');
 
   return $field_instances;
